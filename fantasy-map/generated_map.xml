@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Map srs="+proj=latlong +datum=WGS84" background-image="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/textures/mapblur2.png">
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs" background-image="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/textures/mapBGfinal.png">
     <Style name="coastLineBasePolygon">
         <Rule>
             <PolygonSymbolizer fill="rgb(184,170,107)" fill-opacity="0.2"/>
-            <LineSymbolizer stroke="rgb(81,76,57)" stroke-width="0.9" smooth="1.1"/>
+            <LineSymbolizer stroke="rgb(81,76,57)" stroke-width="0.9"/>
         </Rule>
         <Rule>
-            <LineSymbolizer stroke="rgb(47,27,28)" stroke-width="0.4" stroke-opacity="0.05" smooth="7"/>
+            <LineSymbolizer stroke="rgb(160,139,105)" stroke-width="0.5" stroke-opacity="0.4" smooth="2"/>
         </Rule>
     </Style>
     <Style name="coastLine_pattern1" comp-op="lighten">
         <Rule>
-            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/textures/polybg.png"/>
+            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/textures/polybg.png"/>
         </Rule>
     </Style>
     <Style name="depthContour1" comp-op="multiply">
@@ -26,14 +26,14 @@
     </Style>
     <Style name="ff-forest1" comp-op="multiply">
         <Rule>
-            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/textures/trees.png" opacity="0.6"/>
+            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/textures/trees.png" opacity="0.6"/>
         </Rule>
     </Style>
     <Style name="lakes" comp-op="darken">
         <Rule>
             <LineSymbolizer stroke="rgb(82,71,49)" stroke-width="0.6" stroke-opacity="0.3" smooth="1"/>
             <PolygonSymbolizer fill="rgb(131,116,64)" fill-opacity="0.2" smooth="1"/>
-            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/textures/lakes.png" opacity="0.3"/>
+            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/textures/lakes.png" opacity="0.3"/>
         </Rule>
     </Style>
     <Style name="lakesOutline1" comp-op="multiply">
@@ -89,14 +89,14 @@
         <Rule>
             <Filter>([featurecla]=&apos;Desert&apos;)</Filter>
             <PolygonSymbolizer fill="rgb(229,217,145)" fill-opacity="0.15" smooth="3"/>
-            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/textures/desert.png" opacity="0.32"/>
+            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/textures/desert.png" opacity="0.32"/>
             <LineSymbolizer stroke="rgb(109,103,75)" stroke-width="0.3" stroke-opacity="0.2" smooth="5.5"/>
         </Rule>
     </Style>
     <Style name="regionMountain" comp-op="darken">
         <Rule>
             <Filter>([featurecla]=&apos;Range/mtn&apos;)</Filter>
-            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/textures/mountains.png" opacity="0.7"/>
+            <PolygonPatternSymbolizer file="/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/textures/mountains.png" opacity="0.7"/>
         </Rule>
     </Style>
     <Style name="regionScaleRank" comp-op="multiply">
@@ -133,26 +133,26 @@
     <Style name="shippingRoutes1" comp-op="darken">
         <Rule>
             <Filter>([Length0]&gt;=40)</Filter>
-            <LineSymbolizer stroke="rgb(115,99,48)" stroke-width="0.5" stroke-opacity="0.3" smooth="1"/>
+            <LineSymbolizer stroke="rgb(115,99,48)" stroke-width="0.4" stroke-opacity="0.2" smooth="1"/>
         </Rule>
         <Rule>
             <Filter>([Length0]&gt;=40)</Filter>
-            <LineSymbolizer stroke="rgb(115,99,48)" stroke-width="0.2" stroke-opacity="0.2" smooth="5"/>
+            <LineSymbolizer stroke="rgb(115,99,48)" stroke-width="0.2" stroke-opacity="0.1" smooth="5"/>
         </Rule>
         <Rule>
             <Filter>([Length0]&gt;=40)</Filter>
-            <LineSymbolizer stroke="rgb(115,99,48)" stroke-width="0.2" stroke-opacity="0.2" smooth="15"/>
+            <LineSymbolizer stroke="rgb(115,99,48)" stroke-width="0.2" stroke-opacity="0.08" smooth="15"/>
         </Rule>
     </Style>
     <Style name="sketchy_outline1" comp-op="multiply">
         <Rule>
-            <LineSymbolizer stroke="rgb(97,90,64)" stroke-opacity="0.5" smooth="3.5"/>
+            <LineSymbolizer stroke="rgb(97,90,64)" stroke-opacity="0.3" smooth="3.5"/>
         </Rule>
         <Rule>
-            <LineSymbolizer stroke="rgb(97,90,64)" stroke-width="0.5" stroke-opacity="0.4" smooth="7"/>
+            <LineSymbolizer stroke="rgb(97,90,64)" stroke-width="0.5" stroke-opacity="0.3" smooth="5"/>
         </Rule>
         <Rule>
-            <LineSymbolizer stroke="rgb(58,55,47)" stroke-width="0.3" stroke-opacity="0.1" smooth="9"/>
+            <LineSymbolizer stroke="rgb(58,55,47)" stroke-width="0.3" stroke-opacity="0.1" smooth="7"/>
         </Rule>
         <Rule>
             <LineSymbolizer stroke="rgb(84,78,44)" stroke-width="5.5" stroke-opacity="0.05" smooth="9"/>
@@ -160,12 +160,12 @@
     </Style>
     <Style name="sketchy_outline2" comp-op="multiply">
         <Rule>
-            <LineSymbolizer stroke="rgb(71,69,64)" stroke-opacity="0.1" smooth="10"/>
+            <LineSymbolizer stroke="rgb(71,69,64)" stroke-opacity="0.1" smooth="8"/>
         </Rule>
     </Style>
     <Style name="sketchy_outline3" comp-op="lighten">
         <Rule>
-            <LineSymbolizer stroke="rgb(95,76,49)" stroke-width="0.06" stroke-opacity="0.08" smooth="17"/>
+            <LineSymbolizer stroke="rgb(95,76,49)" stroke-width="0.06" stroke-opacity="0.08" smooth="10"/>
         </Rule>
     </Style>
     <Layer name="ne_50m_coastline" srs="+proj=latlong +datum=WGS84">
@@ -175,7 +175,7 @@
         <StyleName>sketchy_outline2</StyleName>
         <StyleName>sketchy_outline3</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/coastline.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/coastline.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
@@ -183,7 +183,7 @@
         <StyleName>depthContour1</StyleName>
         <StyleName>depthContour2</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/DepthContours.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/DepthContours.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
@@ -192,7 +192,7 @@
         <StyleName>regionDesert</StyleName>
         <StyleName>regionScaleRank</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/detailed_geography_regions_polys.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/detailed_geography_regions_polys.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
@@ -201,7 +201,7 @@
         <StyleName>lakesOutline1</StyleName>
         <StyleName>lakesOutline2</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/lakes.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/lakes.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
@@ -210,7 +210,7 @@
         <StyleName>riverlines2</StyleName>
         <StyleName>riverlines3</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/river_lake_lines.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/river_lake_lines.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
@@ -219,28 +219,21 @@
         <StyleName>reeflines2</StyleName>
         <StyleName>reeflines3</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/reefs.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/reefs.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
     <Layer name="frontier" srs="+proj=latlong +datum=WGS84">
         <StyleName>ff-forest1</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/frontier.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/frontier.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
     <Layer name="shipping_routes" srs="+proj=latlong +datum=WGS84">
         <StyleName>shippingRoutes1</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/shipping_routes.shp</Parameter>
-            <Parameter name="type">shape</Parameter>
-        </Datasource>
-    </Layer>
-    <Layer name="populated_places" srs="+proj=latlong +datum=WGS84">
-        <StyleName>placeLabels</StyleName>
-        <Datasource>
-            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/layers/populated_places.shp</Parameter>
+            <Parameter name="file">/Users/erikhazzard/Mapping/mapnikTest/lotrmap/fantasy-map/layers/shipping_routes.shp</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
